@@ -41,6 +41,30 @@ function getWinner(playerMove,computerMove) {
     // Assume that the only values playerMove and computerMove can have are 'rock', 'paper', and 'scissors'.
     // The rules of the game are that 'rock' beats 'scissors', 'scissors' beats 'paper', and 'paper' beats 'rock'.
     /* YOUR CODE HERE */
+    if (playerMove === computerMove) {
+        return "tie";
+    }
+    else if (playerMove === "rock") {
+        if (computerMove === "scissors") {
+            return "player";
+        }
+        else (computerMove === "paper")
+            return "computer";
+    }   
+    else if (playerMove === "scissors") {
+        if (computerMove === "paper") {
+            return "player";
+        }
+        else (computerMove === "rock")
+            return "computer";
+    }   
+    else if (playerMove === "paper") {
+        if (computerMove === "rock") {
+            return "player";
+        }
+        else (computerMove === "scissors")
+            return "computer";
+    }   
     return winner;
 }
 
